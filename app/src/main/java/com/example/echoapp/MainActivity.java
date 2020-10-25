@@ -25,13 +25,15 @@ public class MainActivity extends AppCompatActivity {
         setUpToolbar();
         setUpFAB();
         setUpFields();
+        //mSnackBarOutput.setText()
     }
 
     private void setUpFields() {
         mEditTextInput = findViewById(R.id.user_input);
 
         View layoutMain = findViewById(R.id.main_activity);
-        mSnackBarOutput = Snackbar.make(layoutMain, "", Snackbar.LENGTH_INDEFINITE);
+        mSnackBarOutput = Snackbar.make(layoutMain, R.string.about, Snackbar.LENGTH_INDEFINITE);
+        mSnackBarOutput.show();
     }
 
     private void setUpFAB() {
