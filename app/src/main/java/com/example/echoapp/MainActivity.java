@@ -48,7 +48,6 @@ public class MainActivity extends AppCompatActivity {
 
     private void handleFABClick() {
         mSnackBarOutput.setText(mEditTextInput.getText().toString());
-        mSnackBarOutput.show();
     }
 
     private void setUpToolbar() {
