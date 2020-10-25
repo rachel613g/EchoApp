@@ -16,4 +16,20 @@
 
     <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
 
+    <style name="text_view_style">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginTop">@dimen/standard_margin</item>
+        <item name="android:textAppearance">@style/TextAppearance.AppCompat.Medium</item>
+    </style>
+
+    <style name="edit_text_style">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginTop">@dimen/standard_margin</item>
+        <item name="android:ems">5</item>
+        <item name="android:gravity">center_horizontal</item>
+        <item name="android:inputType">numberDecimal</item>
+        <item name="android:textColor">@android:color/darker_gray</item>
+    </style>
 </resources>
