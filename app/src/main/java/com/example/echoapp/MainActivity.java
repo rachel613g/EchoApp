@@ -12,24 +12,45 @@ import android.view.View;
 
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.EditText;
 
 public class MainActivity extends AppCompatActivity {
+    private EditText mEditTextInput;
+    private Snackbar mSnackBarOutput;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        Toolbar toolbar = findViewById(R.id.toolbar);
-        setSupportActionBar(toolbar);
+        setUpToolbar();
+        setUpFAB();
+        setUpFields();
+    }
 
+    private void setUpFields() {
+        mEditTextInput = findViewById(R.id.user_input);
+
+        View layoutMain = findViewById(R.id.main_activity);
+        mSnackBarOutput = Snackbar.make(layoutMain, "", Snackbar.LENGTH_INDEFINITE);
+    }
+
+    private void setUpFAB() {
         FloatingActionButton fab = findViewById(R.id.fab);
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-                        .setAction("Action", null).show();
+                handleFABClick();
             }
         });
+    }
+
+    private void handleFABClick() {
+        mSnackBarOutput.setText(mEditTextInput.getText().toString());
+    }
+
+    private void setUpToolbar() {
+        Toolbar toolbar = findViewById(R.id.toolbar);
+        setSupportActionBar(toolbar);
     }
 
     @Override
