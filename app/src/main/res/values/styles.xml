@@ -29,7 +29,7 @@
         <item name="android:layout_marginTop">@dimen/standard_margin</item>
         <item name="android:ems">5</item>
         <item name="android:gravity">center_horizontal</item>
-        <item name="android:inputType">numberDecimal</item>
+        <item name="android:inputType">textNoSuggestions</item>
         <item name="android:textColor">@android:color/darker_gray</item>
     </style>
 </resources>
